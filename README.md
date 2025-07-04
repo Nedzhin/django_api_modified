@@ -20,10 +20,10 @@ pip install django djangorestframework
 ```
 
 3. Run migrations:
-
+After including core it created tables in it
 ```
-python manage.py makemigrations
-python manage.py migrate
+python manage.py makemigrations core
+python manage.py migrate core
 ```
 
 4. Start the server:
