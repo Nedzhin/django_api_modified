@@ -1,6 +1,10 @@
 from django.urls import path
-from .views import InstructionListView
+from rest_framework.routers import DefaultRouter
+from . import views
 
+router = DefaultRouter()
 urlpatterns = [
-    path('api/instructions/<int:surgery_id>/', InstructionListView.as_view(), name='instruction-list'),
+    path('api/surgeries/<int:surgery_pk>/instructions/', 
+         views.SurgeryInstructionViewSet.as_view({'get': 'list'}), 
+         name='surgery-instructions'),
 ]
