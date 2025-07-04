@@ -47,7 +47,7 @@ http://localhost:8000
 - Custom serializer includes nested fields: patient full name, GP name, and instruction type name.
 
 ## How to Use
-`GET /api/instructions/<surgery_id>/?instruction_type=Referral&start_date=2024-01-01&end_date=2024-12-31`
+curl http://127.0.0.1:8000/api/surgeries/1/instructions/
 
 ## Assumptions
 - `Instruction` has foreign keys to `Patient`, `GP`, and `InstructionType`.
